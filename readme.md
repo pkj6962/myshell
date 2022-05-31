@@ -1,7 +1,8 @@
 # MyShell
 
 ## How to Compile 
-'''
+
+```
 make
 ```
 
@@ -34,22 +35,22 @@ $ ./myshell
 
 
 ### In Child Process 
-
+```
 if it is a pipe process
     open pipe with using pipe() function 
     duplicate piped file descriptor with STDIN or STDOUT 
     close all unused file descriptor (important!)
-
+```
 execute proceess with execvp() function 
 
 
 ### In Parent(Shell) Process
-
+```
     if(Child process is on background)
 
 
     else (foreground)
         wait child process to be terminated (with waitpid() function)
 
-
+```
 
